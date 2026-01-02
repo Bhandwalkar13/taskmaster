@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+backend/venv/
+
+# Django
+db.sqlite3
+staticfiles/
+
+# Environment variables
+.env
+
+# Docker / OS junk
+*.log
+.DS_Store
+
+# Allow backend requirements for Docker / CI
+!backend/requirements.txt
+
