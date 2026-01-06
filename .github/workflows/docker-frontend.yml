@@ -1,0 +1,21 @@
+name: Frontend CI - Docker Build
+
+on:
+  push:
+    paths:
+      - "frontend/**"
+      - ".github/workflows/docker-frontend.yml"
+
+jobs:
+  build-frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build frontend Docker image
+        run: |
+          cd frontend
+          docker build -t taskmaster-frontend .
+
